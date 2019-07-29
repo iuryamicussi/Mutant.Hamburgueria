@@ -1,0 +1,37 @@
+.ingrediente-grupo{
+  display:inline;
+}
+
+.ingrediente-nome {
+  background: #cafd9d;
+  color: #545454;
+  padding: 5px;
+  font-weight: bold;
+}
+.ingrediente-codigo {
+  display:none;
+}
+
+ul {
+  list-style-type: none;
+  float: right;
+}
+
+div.menu {
+  width: 150px;
+  height: 70px;
+  padding: 20px;
+  font-weight: bold;
+  color:white;
+}
+
+div.menu-inicia-venda{
+  background: #0bdd4a;
+ 
+}
+div.menu-cancela-venda{
+  background: #b12121;
+}
+div.menu-finalizar-venda{
+  background: #7368b4
+}

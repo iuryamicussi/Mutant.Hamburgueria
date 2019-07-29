@@ -1,0 +1,38 @@
+<h1>Cardápio</h1>
+<ul>
+  <li><div id="btnIniciarVenda" class="btn menu menu-inicia-venda" (click)="ativarModoVenda()"><span>Iniciar Venda</span></div></li>
+  <li><div id="btnCancelarVenda" style="display:none" class="btn menu menu-cancela-venda" (click)="cancelarModoVenda()">Cancelar Venda</div></li>
+</ul>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <td *ngIf="isModoVenda()" style="width: 40px"></td>
+      <td style="width: 40px">Código</td>
+      <td>Lanche</td>
+      <td>Preço</td>
+    </tr>
+    <tr>
+      <td [attr.colspan]="colspanIngredientes">Ingredientes</td>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngFor="let lanche of listaLanches">
+      <tr>
+        <td *ngIf="isModoVenda()"><input style="width: 40px" type="checkbox"></td>
+        <td><span class="lanche-codigo">{{lanche.codigo}}</span></td>
+        <td>{{lanche.nome}}</td>
+        <td>{{lanche.preco}}</td>
+      </tr>
+      <tr>
+        <td [attr.colspan]="colspanIngredientes">
+          <ng-container *ngFor="let ingrediente of lanche.ingredientes">
+            <div class="ingrediente-grupo"><span class="ingrediente-codigo">{{ingrediente.codigo}}</span><span class="ingrediente-nome">{{ingrediente.nome}}</span></div>
+          </ng-container>
+        </td>
+      </tr>
+    </ng-container>
+  </tbody>
+</table>
+<ul>
+  <li><div id="btnFinalizarVenda" style="display: none"class="btn menu menu-finalizar-venda" (click)="finalizarVenda()"><span>Finalizar Venda</span></div></li>
+</ul>
