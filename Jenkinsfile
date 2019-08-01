@@ -6,7 +6,7 @@ node {
     bat "dotnet restore"
     bat "dotnet clean"
 	}
-  stage ('Build){
+  stage ('Build'){
     bat "dotnet build --configuration Release"
   }
 }
