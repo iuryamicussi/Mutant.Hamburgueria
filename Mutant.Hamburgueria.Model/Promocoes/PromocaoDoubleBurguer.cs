@@ -20,7 +20,8 @@ namespace Mutant.Hamburgueria.Model.Promocoes
 
         public override decimal ValorDoDesconto()
         {
-            return Math.Abs(lanche.Ingredientes.Count(c => c.Codigo == _ingredientePromocao) / QTDPROMOCAO) * _precoIngredientePromocao;
+            //return Math.Abs(lanche.Ingredientes.Count(c => c.Codigo == _ingredientePromocao) / QTDPROMOCAO) * _precoIngredientePromocao;
+            return 0; //forçando teste a falhar, testando integração contínua
         }
     }
 }
