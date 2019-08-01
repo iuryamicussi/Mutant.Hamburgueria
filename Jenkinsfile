@@ -9,4 +9,7 @@ node {
   	stage ('Build'){
 	    sh "dotnet build --configuration Release"
   	}
+	stage ('Test'){
+	    sh "dotnet test"
+	}
 }
