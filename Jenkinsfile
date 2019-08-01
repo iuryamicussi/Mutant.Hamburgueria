@@ -3,10 +3,10 @@ node {
 		git 'https://github.com/iuryamicussi/Mutant.Hamburgueria.git'
 	}
 	stage ('Restore'){
-    bat "dotnet restore"
-    bat "dotnet clean"
+	    sh "dotnet restore"
+	    sh "dotnet clean"
 	}
-  stage ('Build'){
-    bat "dotnet build --configuration Release"
-  }
+  	stage ('Build'){
+	    sh "dotnet build --configuration Release"
+  	}
 }
